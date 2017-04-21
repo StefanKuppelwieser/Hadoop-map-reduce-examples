@@ -7,8 +7,8 @@ Fictitious data, which are not true, have been used as exemplary data.
 
 You have to copy the data-schema to hadoop dfs and create environments variables
 
-`hadoop fs -mkdir /user/<YOUR USER>
-hadoop fs -mkdir input1`
+`hadoop fs -mkdir /user/<YOUR USER>`
+`hadoop fs -mkdir input1`
 
 `hadoop fs -copyFromLocal /home/<YOUR USER>/file01 \input1/file01`
 `hadoop fs -copyFromLocal /home/<YOUR USER>/file02 \input1/file02`
@@ -23,7 +23,6 @@ hadoop fs -mkdir input1`
 ## Example: SportBrands
 
 As a result you can see the brand and the founding year
-
 
 `cd SportBrands-Java`
 
@@ -40,11 +39,9 @@ As a result you can see the brand and the founding year
 `./run_SportBrands.sh`
 
 
-
 ## Example: SportBrands AmountOfSoldProducts 
 
 As a result you can see the amount of sold products and the brand 
-
 
 `cd SportBrands-Java`
 
@@ -56,12 +53,9 @@ As a result you can see the amount of sold products and the brand
 `/usr/bin/hadoop com.sun.tools.javac.Main AmountOfSoldProducts.java`
 `jar cf amountOfSoldProducts.jar AmountOfSoldProducts*.class`
 
-`cd ..
+`cd ..`
 
 `./run_AmountOfSoldProducts.sh`
-
-
-
 
 ## Example: SportBrands AmountOfSoldProducts 
 
@@ -82,11 +76,9 @@ The brand, which has been on the market since the shortest time, is shown
 `./run_NewestBrand.sh`
 
 
-
 ## Example: SportBrands OldestBrand 
 
 `The brand, which has been on the market since the longest time, is shown`
-
 
 `cd SportBrands-Java`
 
@@ -102,15 +94,9 @@ The brand, which has been on the market since the shortest time, is shown
 
 `./run_NewestBrand.sh`
 
-
-
-
-
-
 ## AverageSoldProductsPerYear
 
 It shows the annual average of sold products since the brand is on the market 
-
 
 `cd ~`
 
