@@ -5,7 +5,10 @@ Fictitious data, which are not true, have been used as exemplary data.
 
 ## Prerequisite
 
-You have to copy the data-schema to hadoop dfs and create environments variables
+You have to ..
+1. .. change the chmod of the shell files
+2. .. copy the data-schema to hadoop dfs 
+3. .. and create environments variables
 
 ```
 chmod 757 run_AmountOfSoldProducts.sh
