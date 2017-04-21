@@ -1,7 +1,15 @@
 # Hadoop map reduce examples
 
 Some examples to show the approach of map reduce from Hadoop.
+
+## Table SportBrands
+
 Fictitious data, which are not true, have been used as exemplary data.
+
+1. Column: Shows the brand
+2. Column: Land from the headquarters
+3. Column: Shows the sales numbers of the products so far
+4. Column: Establishment of the brand
 
 ## Prerequisite
 
