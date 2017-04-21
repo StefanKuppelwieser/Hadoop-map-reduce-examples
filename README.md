@@ -7,115 +7,139 @@ Fictitious data, which are not true, have been used as exemplary data.
 
 You have to copy the data-schema to hadoop dfs and create environments variables
 
-`chmod 757 run_AmountOfSoldProducts.sh`
-`chmod 757 run_AverageSoldProductsPerYear.sh`
-`chmod 757 run_NewestBrand.sh`
-`chmod 757 run_OldestBrand.sh`
-`chmod 757 run_SportBrands.sh`
+```
+chmod 757 run_AmountOfSoldProducts.sh
+chmod 757 run_AverageSoldProductsPerYear.sh
+chmod 757 run_NewestBrand.sh
+chmod 757 run_OldestBrand.sh
+chmod 757 run_SportBrands.sh
 
-`hadoop fs -mkdir /user/<YOUR USER>`
-`hadoop fs -mkdir input1`
+hadoop fs -rm -r input1
 
-`hadoop fs -copyFromLocal /home/<YOUR USER>/file01 \input1/file01`
-`hadoop fs -copyFromLocal /home/<YOUR USER>/file02 \input1/file02`
-`hadoop fs -copyFromLocal /home/<YOUR USER>/sportBrands \input1/sportBrands`
+hadoop fs -mkdir /user/student_63
+hadoop fs -mkdir input1
 
-`hadoop dfs -ls /user/<YOUR USER>/input1/`
+hadoop fs -copyFromLocal /home/student_63/file01 \input1/file01
+hadoop fs -copyFromLocal /home/student_63/file02 \input1/file02
+hadoop fs -copyFromLocal /home/student_63/sportBrands \input1/sportBrands
 
-`export JAVA_HOME=/usr/java/default`
-`export PATH=$JAVA_HOME/bin:$PATH`
-`export HADOOP_CLASSPATH=$JAVA_HOME/lib/tools.jar`
+hadoop dfs -ls /user/student_63/input1/
+
+export JAVA_HOME=/usr/java/default
+export PATH=$JAVA_HOME/bin:$PATH
+export HADOOP_CLASSPATH=$JAVA_HOME/lib/tools.jar
+```
 
 ## Example: SportBrands
 
 As a result you can see the brand and the founding year
 
-`cd SportBrands-Java`
+```
+cd ~
 
-`rm -f SportBrands$IntSumReducer.class`
-`rm -f SportBrands$TokenizerMapper.class`
-`rm -f SportBrands.class`
-`rm -f sportBrands.jar`
+cd SportBrands-Java
 
-`/usr/bin/hadoop com.sun.tools.javac.Main SportBrands.java`
-`jar cf sportBrands.jar SportBrands*.class`
+rm -f SportBrands$IntSumReducer.class
+rm -f SportBrands$TokenizerMapper.class
+rm -f SportBrands.class
+rm -f sportBrands.jar
 
-`cd ..`
+/usr/bin/hadoop com.sun.tools.javac.Main SportBrands.java
+jar cf sportBrands.jar SportBrands*.class
 
-`./run_SportBrands.sh`
+cd ..
+
+./run_SportBrands.sh
+```
 
 
-## Example: SportBrands AmountOfSoldProducts 
+## Example: AmountOfSoldProducts 
 
 As a result you can see the amount of sold products and the brand 
 
-`cd SportBrands-Java`
+```
+cd ~
 
-`rm -f AmountOfSoldProducts$IntSumReducer.class`
-`rm -f AmountOfSoldProducts$TokenizerMapper.class`
-`rm -f AmountOfSoldProducts.class`
-`rm -f AmountOfSoldProducts.jar`
+cd SportBrands-Java
 
-`/usr/bin/hadoop com.sun.tools.javac.Main AmountOfSoldProducts.java`
-`jar cf amountOfSoldProducts.jar AmountOfSoldProducts*.class`
+rm -f AmountOfSoldProducts$IntSumReducer.class
+rm -f AmountOfSoldProducts$TokenizerMapper.class
+rm -f AmountOfSoldProducts.class
+rm -f AmountOfSoldProducts.jar
 
-`cd ..`
+/usr/bin/hadoop com.sun.tools.javac.Main AmountOfSoldProducts.java
+jar cf amountOfSoldProducts.jar AmountOfSoldProducts*.class
 
-`./run_AmountOfSoldProducts.sh`
+cd ..
 
-## Example: SportBrands AmountOfSoldProducts 
+./run_AmountOfSoldProducts.sh
+```
+
+
+## Example: NewestBrand 
 
 The brand, which has been on the market since the shortest time, is shown
 
-`cd SportBrands-Java`
+```
+cd ~
 
-`rm -f NewestBrand$IntSumReducer.class`
-`rm -f NewestBrand$TokenizerMapper.class`
-`rm -f NewestBrand.class`
-`rm -f NewestBrand.jar`
+cd SportBrands-Java
 
-`/usr/bin/hadoop com.sun.tools.javac.Main NewestBrand.java`
-`jar cf newestBrand.jar NewestBrand*.class`
+rm -f NewestBrand$IntSumReducer.class
+rm -f NewestBrand$TokenizerMapper.class
+rm -f NewestBrand.class
+rm -f NewestBrand.jar
 
-`cd ..`
+/usr/bin/hadoop com.sun.tools.javac.Main NewestBrand.java
+jar cf newestBrand.jar NewestBrand*.class
 
-`./run_NewestBrand.sh`
+cd ..
+
+./run_NewestBrand.sh
+```
 
 
-## Example: SportBrands OldestBrand 
+## Example: OldestBrand 
 
-`The brand, which has been on the market since the longest time, is shown`
+The brand, which has been on the market since the longest time, is shown
 
-`cd SportBrands-Java`
+```
 
-`rm -f OldestBrand$IntSumReducer.class`
-`rm -f OldestBrand$TokenizerMapper.class`
-`rm -f OldestBrand.class`
-`rm -f OldestBrand.jar`
+cd ~
 
-`/usr/bin/hadoop com.sun.tools.javac.Main OldestBrand.java`
-`jar cf oldestBrand.jar OldestBrand*.class`
+cd SportBrands-Java
 
-`cd ..`
+rm -f OldestBrand$IntSumReducer.class
+rm -f OldestBrand$TokenizerMapper.class
+rm -f OldestBrand.class
+rm -f OldestBrand.jar
 
-`./run_NewestBrand.sh`
+/usr/bin/hadoop com.sun.tools.javac.Main OldestBrand.java
+jar cf oldestBrand.jar OldestBrand*.class
 
-## AverageSoldProductsPerYear
+cd ..
+
+./run_NewestBrand.sh
+```
+
+## Example: AverageSoldProductsPerYear
 
 It shows the annual average of sold products since the brand is on the market 
 
-`cd ~`
+```
+cd ~
 
-`cd SportBrands-Java`
+cd SportBrands-Java
 
-`rm -f AverageSoldProductsPerYear$IntSumReducer.class`
-`rm -f AverageSoldProductsPerYear$TokenizerMapper.class`
-`rm -f AverageSoldProductsPerYear.class`
-`rm -f AverageSoldProductsPerYear.jar`
+rm -f AverageSoldProductsPerYear$IntSumReducer.class
+rm -f AverageSoldProductsPerYear$TokenizerMapper.class
+rm -f AverageSoldProductsPerYear.class
+rm -f AverageSoldProductsPerYear.jar
 
-`/usr/bin/hadoop com.sun.tools.javac.Main AverageSoldProductsPerYear.java`
-`jar cf averageSoldProductsPerYear.jar AverageSoldProductsPerYear*.class`
+/usr/bin/hadoop com.sun.tools.javac.Main AverageSoldProductsPerYear.java
+jar cf averageSoldProductsPerYear.jar AverageSoldProductsPerYear*.class
 
-`cd ..`
+cd ..
 
-`./run_AverageSoldProductsPerYear.sh`
+./run_AverageSoldProductsPerYear.sh
+```
