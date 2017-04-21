@@ -7,8 +7,8 @@ Fictitious data, which are not true, have been used as exemplary data.
 
 You have to copy the data-schema to hadoop dfs and create environments variables
 
-`hadoop fs -mkdir /user/<YOUR USER>`
-`hadoop fs -mkdir input1`
+`hadoop fs -mkdir /user/<YOUR USER>
+hadoop fs -mkdir input1`
 
 `hadoop fs -copyFromLocal /home/<YOUR USER>/file01 \input1/file01`
 `hadoop fs -copyFromLocal /home/<YOUR USER>/file02 \input1/file02`
@@ -107,7 +107,7 @@ The brand, which has been on the market since the shortest time, is shown
 
 
 
-## AverageSoldProductsPerYear #####"
+## AverageSoldProductsPerYear
 
 It shows the annual average of sold products since the brand is on the market 
 
