@@ -7,6 +7,12 @@ Fictitious data, which are not true, have been used as exemplary data.
 
 You have to copy the data-schema to hadoop dfs and create environments variables
 
+`chmod 757 run_AmountOfSoldProducts.sh`
+`chmod 757 run_AverageSoldProductsPerYear.sh`
+`chmod 757 run_NewestBrand.sh`
+`chmod 757 run_OldestBrand.sh`
+`chmod 757 run_SportBrands.sh`
+
 `hadoop fs -mkdir /user/<YOUR USER>`
 `hadoop fs -mkdir input1`
 
